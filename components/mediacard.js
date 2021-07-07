@@ -1,7 +1,7 @@
 import Sectionheader from "./sectionheader"
 
 const Mediacard = ({isExternalSrc, title, src, subtext, customClasses}) => {
-    const classes = "rounded-xl border-2 hover: " + customClasses
+    const classes = "bg-gray-500 rounded-xl border-2 " + customClasses
     const height = 236
 
     if (isExternalSrc) {
