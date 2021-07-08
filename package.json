@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "date-fns": "^2.22.1",
+    "firebase-admin": "^9.10.0",
     "gray-matter": "^4.0.3",
     "next": "11.0.1",
     "postcss-flexbugs-fixes": "^5.0.2",
