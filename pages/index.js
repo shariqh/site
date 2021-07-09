@@ -26,25 +26,15 @@ export default function Home({allPostsData}) {
                 <meta name="twitter:card" content="summary_large_image"/>
                 <title>Shariq's Site</title>
             </Head>
-            <div className="min-h-screen p-6 mx-auto max-w-screen-xl">
-                <header className="p-6 pt-12 text-center text-white">
+            <div className="space-y-12 space-x-6 min-h-screen mx-auto max-w-screen-lg">
+                <header className="pt-14 text-center text-white">
                     <img className="mx-auto ring-4 ring-yellow-500 rounded-full"
                          src="/images/profile.jpg"
                          alt=""
                          width="240"
                          height="240">
                     </img>
-
-                    {/*<Image*/}
-                    {/*    priority*/}
-                    {/*    src="/images/profile.jpg"*/}
-                    {/*    className="rounded-full ring"*/}
-                    {/*    height={240}*/}
-                    {/*    width={240}*/}
-                    {/*    alt={name}*/}
-                    {/*/>*/}
-
-                    <h1 className="pt-6 text-4xl font-bold">{name}</h1>
+                    <h1 className="mx-auto pt-6 text-4xl font-bold">{name}</h1>
                     <p className="text-yellow-500">he/him</p>
                 </header>
                 <section className="text-gray-400 text-xl">
@@ -61,7 +51,7 @@ export default function Home({allPostsData}) {
                         🥭
                     </p>
                 </section>
-                <section className="py-6 grid gap-x-4 gap-y-6 grid-cols-3">
+                <section className="grid gap-x-4 gap-y-6 grid-cols-3">
                     <Mediacard
                         title="🎧 What I'm Listening To"
                         src="https://open.spotify.com/embed/playlist/7w33zSxzXN5blasm8mk6cc"
@@ -79,23 +69,23 @@ export default function Home({allPostsData}) {
                     <Mediacard
                         title="☕ Coffee of the Month"
                         src="https://cdn.shopify.com/s/files/1/0353/3399/6675/products/Zoom_info_images-15_700x.jpg"
-                        subtext="Rating⭐⭐⭐⭐"
-                        customClasses="border-yellow-500 flex justify-center"
+                        subtext="Rating ⭐⭐⭐⭐"
+                        customClasses="border-yellow-500"
                     />
                     <Mediacard
                         title="✏️ Note Taking"
                         src="https://is5-ssl.mzstatic.com/image/thumb/Purple115/v4/e5/21/84/e5218487-6977-93b6-7e35-67142546b221/AppIcon-85-220-0-4-2x-P3.png/1200x630bb.png"
-                        customClasses="border-yellow-700 bg-gray-100 flex justify-center"
+                        customClasses="border-yellow-700"
                     />
                     <Mediacard
                         title="📚 Organizing"
                         src="https://pbs.twimg.com/profile_images/1381737932780752896/MbHGl54A.png"
-                        customClasses="border-red-500 bg-gray-100 flex justify-center"
+                        customClasses="border-red-500"
                     />
                     <Mediacard
                         title="💻 Development"
                         src="https://resources.jetbrains.com/storage/products/intellij-idea/img/meta/intellij-idea_logo_300x300.png"
-                        customClasses="border-red-800 bg-gray-100 flex justify-center"
+                        customClasses="border-red-800"
                     />
                 </section>
                 <section>
@@ -106,20 +96,20 @@ export default function Home({allPostsData}) {
                     <Sectionheader title="Projects" />
                     In Progress...
                 </section>
-                <footer className="py-24 text-center text-yellow-500 text-xl font-semibold">
+                <footer className="pb-8 text-center text-yellow-500 text-xl font-semibold">
                     Built with
                     <br/>
                     <Image
                         src="/images/nextjs-logo.png"
-                        height={42} // Desired size with correct aspect ratio
-                        width={69} // Desired size with correct aspect ratio
+                        height={42}
+                        width={69}
                         alt="Next.js"
                     />
                     {' '}
                     <Image
                         src="/images/tailwindcss-logo.png"
-                        height={44} // Desired size with correct aspect ratio
-                        width={95.5} // Desired size with correct aspect ratio
+                        height={44}
+                        width={95.5}
                         alt="Next.js"
                     />
                 </footer>

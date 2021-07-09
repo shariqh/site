@@ -1,6 +1,6 @@
 const Sectionheader = ({title}) => {
     return (
-        <p className="py-4 text-2xl text-yellow-500 font-semibold">
+        <p className="text-3xl text-yellow-500 font-semibold">
             {title}
         </p>
     );
