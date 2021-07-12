@@ -1,10 +1,10 @@
-const Mediacard = ({isExternalSrc, title, src, subtext, customClasses}) => {
-    const classes = "flex justify-center bg-gray-100 rounded-xl border-2 " + customClasses
-    const height = 236
+const Mediacard = ({isExternalSrc, title, src, subtext}) => {
+    const classes = "flex justify-center p-1 bg-gray-900 rounded-xl border-2"
+    const height = 244
 
     return (
         <div className="flex flex-col text-center">
-            <p className="text-2xl text-yellow-500 font-semibold">
+            <p className="pb-2 text-2xl text-yellow-500 font-semibold">
                 {title}
             </p>
             {isExternalSrc ? (
@@ -12,7 +12,6 @@ const Mediacard = ({isExternalSrc, title, src, subtext, customClasses}) => {
                     src={src}
                     className={classes}
                     height={height}
-                    allowTransparency="true"
                     allow="encrypted-media">
                 </iframe>
             ) : (
@@ -21,7 +20,7 @@ const Mediacard = ({isExternalSrc, title, src, subtext, customClasses}) => {
                         src={src}
                         alt=""
                         width="230"
-                        height="232"
+                        height={height}
                     />
                 </div>
             )}

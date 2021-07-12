@@ -56,36 +56,30 @@ export default function Home({allPostsData}) {
                         title="🎧 What I'm Listening To"
                         src="https://open.spotify.com/embed/playlist/7w33zSxzXN5blasm8mk6cc"
                         subtext="The only truth is music 🎵"
-                        customClasses="border-green-600"
                         isExternalSrc="true"
                     />
                     <Mediacard
                         title="🎤 What I'm Recording"
                         src="https://open.spotify.com/embed/show/29kRN9P3A5dljJmYr3zPsF"
                         subtext="☝️ pssst... I'm the host"
-                        customClasses="border-green-900"
                         isExternalSrc="true"
                     />
                     <Mediacard
                         title="☕ Coffee of the Month"
                         src="https://cdn.shopify.com/s/files/1/0353/3399/6675/products/Zoom_info_images-15_700x.jpg"
                         subtext="Rating ⭐⭐⭐⭐"
-                        customClasses="border-yellow-500"
                     />
                     <Mediacard
                         title="✏️ Note Taking"
                         src="https://is5-ssl.mzstatic.com/image/thumb/Purple115/v4/e5/21/84/e5218487-6977-93b6-7e35-67142546b221/AppIcon-85-220-0-4-2x-P3.png/1200x630bb.png"
-                        customClasses="border-yellow-700"
                     />
                     <Mediacard
                         title="📚 Organizing"
                         src="https://pbs.twimg.com/profile_images/1381737932780752896/MbHGl54A.png"
-                        customClasses="border-red-500"
                     />
                     <Mediacard
                         title="💻 Development"
                         src="https://resources.jetbrains.com/storage/products/intellij-idea/img/meta/intellij-idea_logo_300x300.png"
-                        customClasses="border-red-800"
                     />
                 </section>
                 <section>
