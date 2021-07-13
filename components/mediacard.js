@@ -1,9 +1,11 @@
+import Image from "next/image"
+
 const Mediacard = ({isExternalSrc, title, src, subtext}) => {
-    const classes = "flex justify-center p-1 bg-gray-900 rounded-xl border-2"
-    const height = 244
+    const classes = "flex justify-center p-1 rounded-xl"
+    const height = 240
 
     return (
-        <div className="flex flex-col text-center">
+        <div className="flex flex-col overflow-hidden">
             <p className="pb-2 text-2xl text-yellow-500 font-semibold">
                 {title}
             </p>
@@ -16,7 +18,7 @@ const Mediacard = ({isExternalSrc, title, src, subtext}) => {
                 </iframe>
             ) : (
                 <div className={classes}>
-                    <img
+                    <Image
                         src={src}
                         alt=""
                         width="230"
