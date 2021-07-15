@@ -1,8 +1,13 @@
 import db, {postToJSON} from "../../lib/firebase"
 import Head from "next/head";
 import {siteTitle} from "../index";
+import Image from "next/image"
+import {Roastslider} from "../../components/roastslider"
+import {Coffeebanner} from "../../components/coffeebanner"
+import {fetchAPI} from "../../lib/api"
 
 const Index = ({coffees}) => {
+
     return (
         <div className="overflow-auto">
             <Head>
@@ -19,65 +24,29 @@ const Index = ({coffees}) => {
                 />
                 <meta name="og:title" content={siteTitle}/>
                 <meta name="twitter:card" content="summary_large_image"/>
-                <title>Shariq's Coffee</title>
+                <title>My Coffee Ratings</title>
             </Head>
-            <div className="space-y-12 space-x-6 min-h-screen mx-auto max-w-screen-lg">
-                <hero>
-                    <div className="py-96 px-12 bg-yellow-900 bg-opacity-30">
-                        <p className="pb-24 text-2xl">Coffee of the Month - {new Date().getMonth()}</p>
-                        <p className="text-2xl">{coffees[0].brand}</p>
-                        <p className="text-4xl font-semibold uppercase">{coffees[0].name}</p>
-                        <br/>
-                        {coffees[0].attributes.map((attribute) => (
-                            <div className="text-lg font-semibold uppercase" key={attribute.name}>{attribute}</div>
-                        ))}
-                        <br/>
-                        <div className="max-w-xs">
-                            <ul>
-                                <li>
-                                    <ul className="grid grid-cols-10 h-7">
-                                        <li className="bg-yellow-50"></li>
-                                        <li className="bg-yellow-100"></li>
-                                        <li className="bg-yellow-200"></li>
-                                        <li className="bg-yellow-300"></li>
-                                        <li className="bg-yellow-400"></li>
-                                        <li className="bg-yellow-500"></li>
-                                        <li className="bg-yellow-600"></li>
-                                        <li className="bg-yellow-700"></li>
-                                        <li className="bg-yellow-800"></li>
-                                        <li className="bg-yellow-900"></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <div className="space-x-64 text-xs text-gray-800 uppercase">
-                                <text>light</text>
-                                <text>dark</text>
-                            </div>
-                        </div>
-                        {/*{coffees[0].roast_level}*/}
-                    </div>
-                </hero>
-
-                <section>
-                    {coffees.map(coffee => (
-                        <div className="bg-green-900 bg-opacity-30" key={coffee.id}>
-                            {coffee.brand}
-                            <br/>
-                            {coffee.name}
-                            <br/>
-                            {coffee.attributes}
-                            <br/>
-                            {coffee.roast_level}
-                        </div>
-                    ))}
-                </section>
+            <div className="my-24 space-y-12">
+                {coffees.map((coffee, i) => (
+                    <Coffeebanner key={coffee.id} index={i} coffee={coffee}/>
+                ))}
             </div>
         </div>
     );
 }
 
 export async function getStaticProps() {
-    const coffees = (await db.collection('coffees').get()).docs.map(postToJSON);
+
+    // const [coffees, images] = await Promise.all([
+    //     (await db.collection('coffees').orderBy('purchase_date', 'desc').get()).docs.map(postToJSON),
+    //     fetchAPI("/coffees/1")
+    // ]);
+    //
+    // return {
+    //     props: {coffees, images}
+    // }
+
+    const coffees = (await db.collection('coffees').orderBy('purchase_date', 'desc').get()).docs.map(postToJSON);
 
     return {
         props: {coffees},

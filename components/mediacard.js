@@ -1,7 +1,7 @@
 import Image from "next/image"
 
 const Mediacard = ({isExternalSrc, title, src, subtext}) => {
-    const classes = "flex p-1 rounded-xl justify-center "
+    const classes = "flex p-1 rounded-xl justify-center"
 
     return (
         <div className="flex flex-col text-center overflow-hidden">
