@@ -1,10 +1,7 @@
 import db, {postToJSON} from "../../lib/firebase"
 import Head from "next/head";
 import {siteTitle} from "../index";
-import Image from "next/image"
-import {Roastslider} from "../../components/roastslider"
 import {Coffeebanner} from "../../components/coffeebanner"
-import {fetchAPI} from "../../lib/api"
 
 const Index = ({coffees}) => {
 
@@ -36,16 +33,6 @@ const Index = ({coffees}) => {
 }
 
 export async function getStaticProps() {
-
-    // const [coffees, images] = await Promise.all([
-    //     (await db.collection('coffees').orderBy('purchase_date', 'desc').get()).docs.map(postToJSON),
-    //     fetchAPI("/coffees/1")
-    // ]);
-    //
-    // return {
-    //     props: {coffees, images}
-    // }
-
     const coffees = (await db.collection('coffees').orderBy('purchase_date', 'desc').get()).docs.map(postToJSON);
 
     return {
