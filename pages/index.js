@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from "next/link"
 import Sectionheader from "../components/sectionheader"
 import Mediacard from "../components/mediacard"
 import {fetchAPI} from "../lib/api";
@@ -79,11 +80,15 @@ export default function Home({articles}) {
                 <section>
                     <Sectionheader title="Tools"/>
                     <div className="mt-6 max-w-lg mx-auto grid gap-5 lg:grid-cols-4 sm:grid-cols-2 lg:max-w-none">
-                        <Mediacard
-                            title="☕ Coffee"
-                            src="https://cdn.shopify.com/s/files/1/0353/3399/6675/products/Zoom_info_images-15_700x.jpg"
-                            subtext="Rating ⭐⭐⭐⭐"
-                        />
+                        <Link href="/coffee">
+                            <a>
+                                <Mediacard
+                                    title="☕ Coffee"
+                                    src="https://cdn.shopify.com/s/files/1/0353/3399/6675/products/Zoom_info_images-15_700x.jpg"
+                                    subtext="Rating ⭐⭐⭐⭐"
+                                />
+                            </a>
+                        </Link>
                         <Mediacard
                             title="✏️ Writing"
                             src="https://is5-ssl.mzstatic.com/image/thumb/Purple115/v4/e5/21/84/e5218487-6977-93b6-7e35-67142546b221/AppIcon-85-220-0-4-2x-P3.png/1200x630bb.png"
