@@ -83,27 +83,29 @@ export default function Home({articles}) {
                         <Link href="/coffee">
                             <a>
                                 <Mediacard
-                                    title="☕ Coffee"
                                     src="https://cdn.shopify.com/s/files/1/0353/3399/6675/products/Zoom_info_images-15_700x.jpg"
                                     subtext="Rating ⭐⭐⭐⭐"
                                 />
                             </a>
                         </Link>
-                        <Mediacard
-                            title="✏️ Writing"
-                            src="https://is5-ssl.mzstatic.com/image/thumb/Purple115/v4/e5/21/84/e5218487-6977-93b6-7e35-67142546b221/AppIcon-85-220-0-4-2x-P3.png/1200x630bb.png"
-                            subtext="Rating ⭐⭐⭐"
-                        />
-                        <Mediacard
-                            title="📚 Organizing"
-                            src="https://pbs.twimg.com/profile_images/1381737932780752896/MbHGl54A.png"
-                            subtext="Rating ⭐⭐⭐⭐⭐"
-                        />
-                        <Mediacard
-                            title="Development"
-                            src="https://resources.jetbrains.com/storage/products/intellij-idea/img/meta/intellij-idea_logo_300x300.png"
-                            subtext="Rating ⭐⭐⭐⭐⭐"
-                        />
+                        <a href="https://bear.app">
+                            <Mediacard
+                                src="https://is5-ssl.mzstatic.com/image/thumb/Purple115/v4/e5/21/84/e5218487-6977-93b6-7e35-67142546b221/AppIcon-85-220-0-4-2x-P3.png/1200x630bb.png"
+                                subtext="Rating ⭐⭐⭐"
+                            />
+                        </a>
+                        <a href="https://notion.so">
+                            <Mediacard
+                                src="https://pbs.twimg.com/profile_images/1381737932780752896/MbHGl54A.png"
+                                subtext="Rating ⭐⭐⭐⭐⭐"
+                            />
+                        </a>
+                        <a href="https://www.jetbrains.com/idea/">
+                            <Mediacard
+                                src="https://resources.jetbrains.com/storage/products/intellij-idea/img/meta/intellij-idea_logo_300x300.png"
+                                subtext="Rating ⭐⭐⭐⭐⭐"
+                            />
+                        </a>
                     </div>
                 </section>
                 <footer className="pb-8 text-center text-yellow-500 text-xl font-semibold">
