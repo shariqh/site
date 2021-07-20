@@ -29,7 +29,7 @@ export default function Home({articles}) {
                 <title>{name}&apos; Development Site</title>
             </Head>
             <div className="space-y-12">
-                <header className="mt-14 text-center text-white">
+                <header className="text-center text-white">
                     <img className="mx-auto ring-4 ring-yellow-500 rounded-full"
                          src="/images/profile.jpg"
                          alt=""
@@ -40,12 +40,19 @@ export default function Home({articles}) {
                     <p className="text-yellow-500">he/him</p>
                 </header>
                 <section>
-                    <Sectionheader title="About Me 👋"/>
-                    <p className="text-gray-400 text-lg">
-                        I am a cloud native full stack engineer with eleven years of experience in microservice
-                        architecture, development and CI/CD. Lately I have been focusing on Kubernetes, utilizing
-                        GKE and the power of GCP. In my spare time, I have been creating websites with Next.JS,
-                        Strapi, and Firebase. Also, I record my very own podcast, Changelog and I try to blog a bit.
+                    <Sectionheader title="Hello 👋"/>
+                    <p className="text-gray-400 text-xl">
+                        Cloud native architect, media buff, and photographer. In my spare time, I give bad haircuts to my plants. Check them out on my&nbsp;
+                        <a href="https://instagram.com/shariqhiraniphoto"
+                           className="underline text-indigo-300">
+                            Instagram
+                        </a>. Also, I am a huge fan of&nbsp;
+                        <a href="https://plex.tv/"
+                           className="underline text-indigo-300">Plex
+                        </a> - be sure to check out my&nbsp;
+                        <a href="https://github.com/shariqh/home-server-docker-compose"
+                           className="underline text-indigo-300">Docker build repository
+                        </a>.
                     </p>
                 </section>
                 <section>
