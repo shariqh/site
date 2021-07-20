@@ -135,9 +135,6 @@ export default function Home({articles}) {
                         </a>
                     </div>
                 </section>
-                <footer className="text-center text-yellow-500 text-xl font-semibold">
-                    FOOT
-                </footer>
             </div>
         </Layout>
     )
