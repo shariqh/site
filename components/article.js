@@ -14,7 +14,7 @@ const Article = ({article}) => {
             />
             <div className="flex flex-col justify-between">
                 <Link href={`/article/${article.slug}`}>
-                    <a className="block mt-2">
+                    <a className="mt-2">
                         <p className="text-xl font-semibold text-white">{article.title}</p>
                         <p className="text-gray-300">{article.description}</p>
                     </a>
