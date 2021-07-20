@@ -4,13 +4,14 @@ import Sectionheader from "../components/sectionheader"
 import Mediacard from "../components/mediacard"
 import {fetchAPI} from "../lib/api";
 import {Article} from "../components/article";
+import Layout from "../components/layout";
 
 const name = 'Shariq Hirani'
 export const siteTitle = 'Shariq\'s Personal Site'
 
 export default function Home({articles}) {
     return (
-        <div className="bg-gray-800">
+        <Layout>
             <Head>
                 <link rel="icon" href="/favicon.ico"/>
                 <meta
@@ -27,10 +28,9 @@ export default function Home({articles}) {
                 <meta name="twitter:card" content="summary_large_image"/>
                 <title>{name}&apos; Development Site</title>
             </Head>
-            <header
-                className="z-50 sticky p-4 top-0 text-white w-full border-b-2 border-opacity-10 bg-gray-800">
+            <header className="z-50 sticky px-4 pb-4 top-0 text-white w-full border-b-2 border-opacity-10 bg-gray-800">
                 {/*className="fixed flex max-w-screen-lg bg-white border-b justify-between flex-wrap p-5 m-auto top-0 animated">*/}
-                <div className="max-w-screen-lg flex flex-row justify-between space-x-2 mx-auto ">
+                <div className="flex flex-row justify-between space-x-2">
                     <Link href="/">
                         <h1 className="text-xl cursor-pointer">{name}</h1>
                     </Link>
@@ -50,11 +50,11 @@ export default function Home({articles}) {
                             </svg>
                         </span>
                         </Link>
-                </div>
+                    </div>
                 </div>
             </header>
-            <div className="space-y-12 space-x-6 min-h-screen mx-auto max-w-screen-lg">
-                <header className="pt-14 text-center text-white">
+            <div className="space-y-12">
+                <header className="mt-14 text-center text-white">
                     <img className="mx-auto ring-4 ring-yellow-500 rounded-full"
                          src="/images/profile.jpg"
                          alt=""
@@ -66,15 +66,16 @@ export default function Home({articles}) {
                 </header>
                 <section>
                     <Sectionheader title="About Me 👋"/>
-                    <p className="mt-6 text-gray-400 text-lg">
+                    <p className="text-gray-400 text-lg">
                         I am a cloud native full stack engineer with eleven years of experience in microservice
-                        architecture, development and CI/CD. Mainly, I focus on Kubernetes and GCP deployments.
-                        I enjoy solving challenges to the business with technical solutions.
+                        architecture, development and CI/CD. Lately I have been focusing on Kubernetes, utilizing
+                        GKE and the power of GCP. In my spare time, I have been creating websites with Next.JS,
+                        Strapi, and Firebase. Also, I record my very own podcast, Changelog and I try to blog a bit.
                     </p>
                 </section>
                 <section>
                     <Sectionheader title="Recent Blog Posts ✍️"/>
-                    <div className="mt-6 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
+                    <div className="mx-auto grid gap-5 lg:grid-cols-3 max-w-lg lg:max-w-none">
                         {articles.map((article) => (
                             <Article key={article.slug} article={article}/>
                         ))}
@@ -82,13 +83,13 @@ export default function Home({articles}) {
                 </section>
                 <section>
                     <Sectionheader title="Projects 📌"/>
-                    <p className="mt-6 text-gray-400 text-xl">
+                    <p className="text-gray-400 text-xl">
                         In progress...
                     </p>
                 </section>
                 <section>
                     <Sectionheader title="Media 🔊"/>
-                    <div className="mt-6 max-w-lg mx-auto grid gap-5 lg:grid-cols-2 lg:max-w-none">
+                    <div className="mx-auto grid gap-5 lg:grid-cols-2 max-w-lg lg:max-w-none">
                         <Mediacard
                             title="🎧 What I'm Listening To"
                             src="https://open.spotify.com/embed/playlist/7w33zSxzXN5blasm8mk6cc"
@@ -105,7 +106,7 @@ export default function Home({articles}) {
                 </section>
                 <section>
                     <Sectionheader title="Tools ⚒️"/>
-                    <div className="mt-6 max-w-lg mx-auto grid gap-5 lg:grid-cols-4 sm:grid-cols-2 lg:max-w-none">
+                    <div className="grid gap-5 grid-cols-2 lg:grid-cols-4 lg:max-w-none">
                         <Link href="/coffee">
                             <a>
                                 <Mediacard
@@ -134,11 +135,11 @@ export default function Home({articles}) {
                         </a>
                     </div>
                 </section>
-                <footer className="pb-8 text-center text-yellow-500 text-xl font-semibold">
+                <footer className="text-center text-yellow-500 text-xl font-semibold">
                     FOOT
                 </footer>
             </div>
-        </div>
+        </Layout>
     )
 }
 

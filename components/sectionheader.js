@@ -1,6 +1,6 @@
 const Sectionheader = ({title}) => {
     return (
-        <p className="text-3xl text-yellow-500 font-semibold">
+        <p className="pb-6 text-3xl text-yellow-500 font-semibold">
             {title}
         </p>
     );
