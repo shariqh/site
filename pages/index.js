@@ -11,12 +11,12 @@ export const siteTitle = 'Shariq\'s Personal Site'
 
 export default function Home({articles}) {
     return (
-        <Layout>
+        <Layout name={name}>
             <Head>
                 <link rel="icon" href="/favicon.ico"/>
                 <meta
                     name="Shariq's Site"
-                    content="My personal home for my journey though photography, blogging and cloud-native development"
+                    content="My personal home for my journey though photography, blogging, and cloud-native development"
                 />
                 <meta
                     property="og:image"
@@ -28,31 +28,6 @@ export default function Home({articles}) {
                 <meta name="twitter:card" content="summary_large_image"/>
                 <title>{name}&apos; Development Site</title>
             </Head>
-            <header className="z-50 sticky px-4 pb-4 top-0 text-white w-full border-b-2 border-opacity-10 bg-gray-800">
-                {/*className="fixed flex max-w-screen-lg bg-white border-b justify-between flex-wrap p-5 m-auto top-0 animated">*/}
-                <div className="flex flex-row justify-between space-x-2">
-                    <Link href="/">
-                        <h1 className="text-xl cursor-pointer">{name}</h1>
-                    </Link>
-                    <div className="flex flex-row space-x-4 cursor-pointer text-md text-gray-400">
-                        <Link href="/blog">
-                            <span>Blog</span>
-                        </Link>
-                        <Link href="/about">
-                            <span>About</span>
-                        </Link>
-                        <Link href="/">
-                        <span>
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none"
-                                 viewBox="0 0 24 24" stroke="currentColor">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
-                            </svg>
-                        </span>
-                        </Link>
-                    </div>
-                </div>
-            </header>
             <div className="space-y-12">
                 <header className="mt-14 text-center text-white">
                     <img className="mx-auto ring-4 ring-yellow-500 rounded-full"
