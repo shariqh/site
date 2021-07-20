@@ -1,9 +1,9 @@
 import Link from "next/link";
 
 const Layout = ({children, name}) => (
-    <div className="p-4 bg-gray-800">
+    <div className="bg-gray-800">
         <div className="flex flex-col min-h-screen max-w-screen-lg mx-auto">
-            <header className="z-50 sticky px-4 pb-4 mb-6 top-0 text-white w-full border-b-2 border-opacity-10 bg-gray-800">
+            <header className="z-50 sticky p-4 mb-6 top-0 text-white w-full border-b-2 border-opacity-10 bg-gray-800">
                 {/*className="fixed flex max-w-screen-lg bg-white border-b justify-between flex-wrap p-5 m-auto top-0 animated">*/}
                 <div className="flex flex-row justify-between space-x-2">
                     <Link href="/">
@@ -31,7 +31,7 @@ const Layout = ({children, name}) => (
             <div className="flex-grow">
                 {children}
             </div>
-            <footer className="mt-16 mx-auto flex flex-row space-x-16 max-w-xl text-gray-400 text-lg">
+            <footer className="pb-4 mt-16 mx-auto flex flex-row space-x-16 max-w-xl text-gray-400 text-lg">
                 <span>
                     © 2021 Shariq Hirani. All rights reserved.
                 </span>

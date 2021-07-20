@@ -42,7 +42,10 @@ export default function Home({articles}) {
                 <section>
                     <Sectionheader title="Hello 👋"/>
                     <p className="text-gray-400 text-xl">
-                        Cloud native architect, media buff, and photographer. In my spare time, I give bad haircuts to my plants. Check them out on my&nbsp;
+                        Cloud native architect, media buff, photographer, and&nbsp;
+                        <Link href="/coffee">
+                            <a className="underline text-indigo-300">coffee aficionado</a>
+                        </Link>. In my spare time, I give bad haircuts to my plants. Check them out on my&nbsp;
                         <a href="https://instagram.com/shariqhiraniphoto"
                            className="underline text-indigo-300">
                             Instagram

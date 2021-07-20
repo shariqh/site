@@ -36,7 +36,11 @@ const Index = ({}) => {
                         <br/>
                         <br/>
                         The goal for me is to always learn something new, and maybe I can use it to change the world.
-                        But as we have seen over these past few year, change does not come so easily.
+                        But as we have seen over these past few year, change does not come so easily. My other, less
+                        known goal, is to break my addiction to coffee. Seriously, I dedicated a&nbsp;
+                        <Link href="/coffee">
+                            <a className="underline text-indigo-300">whole webpage</a>
+                        </Link>&nbsp;to it ☕. Send help.
                     </p>
                 </section>
             </div>
