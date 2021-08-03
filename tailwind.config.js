@@ -1,3 +1,5 @@
+const plugin = require("tailwindcss/plugin");
+
 module.exports = {
     purge: [
         // Use *.tsx if using TypeScript
@@ -6,5 +8,7 @@ module.exports = {
     ],
     theme: {},
     variants: {},
-    plugins: [],
+    plugins: [
+        require('@tailwindcss/line-clamp')
+    ]
 }

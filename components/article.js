@@ -16,7 +16,7 @@ const Article = ({article}) => {
                 <Link href={`/article/${article.slug}`}>
                     <a className="mt-2">
                         <p className="text-xl font-semibold text-white">{article.title}</p>
-                        <p className="text-gray-300">{article.description}</p>
+                        <p className="text-gray-300 line-clamp-3">{article.description}</p>
                     </a>
                 </Link>
                 <div className="flex items-center">
