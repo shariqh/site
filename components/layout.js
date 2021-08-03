@@ -7,7 +7,16 @@ const Layout = ({children, name}) => (
                 {/*className="fixed flex max-w-screen-lg bg-white border-b justify-between flex-wrap p-5 m-auto top-0 animated">*/}
                 <div className="flex flex-row justify-between space-x-2">
                     <Link href="/">
-                        <h1 className="text-xl cursor-pointer">{name}</h1>
+                        <div className="flex flex-row">
+                                <h1 className="flex flex-row text-xl cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none"
+                                         viewBox="0 0 24 24" stroke="currentColor">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                                              d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                                    </svg>
+                                    &nbsp;{name}
+                                </h1>
+                        </div>
                     </Link>
                     <div className="flex flex-row space-x-4 cursor-pointer text-md text-gray-400">
                         <Link href="/blog">
@@ -17,13 +26,9 @@ const Layout = ({children, name}) => (
                             <span>About</span>
                         </Link>
                         <Link href="/">
-                        <span>
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none"
-                                 viewBox="0 0 24 24" stroke="currentColor">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
-                            </svg>
-                        </span>
+                            <span>
+
+                            </span>
                         </Link>
                     </div>
                 </div>
