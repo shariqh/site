@@ -116,7 +116,6 @@ const Coffeebanner = ({index, coffee}) => {
                                 blurDataURL="/images/placeholder.png"
                                 alt=""
                                 layout="fill"
-                                sizes="100%"
                             />
                         )}
                     </div>

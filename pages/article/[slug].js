@@ -2,11 +2,13 @@ import Layout from "../../components/layout";
 import Image from "next/image"
 import {fetchAPI, getStrapiMedia} from "../../lib/api";
 
+const name = 'Shariq Hirani'
+
 const Article = ({article, tags}) => {
     const imageUrl = getStrapiMedia(article.image);
 
     return (
-        <Layout name={article.title}>
+        <Layout name={name}>
             <section>
                 <div className="flex flex-col mx-auto text-gray-400 max-w-2xl">
                     <img src={imageUrl}
@@ -15,9 +17,8 @@ const Article = ({article, tags}) => {
                          alt=""
                          layout="fill"
                     />
-                    <div className="mt-4 text-gray-400 text-xl">
-                        {article.content}
-                    </div>
+                    <p className="my-4 text-white text-2xl">{article.title}</p>
+                    <p className="-gray-400 text-xl">{article.content}</p>
                 </div>
             </section>
         </Layout>
