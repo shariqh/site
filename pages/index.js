@@ -39,7 +39,7 @@ export default function Home({articles}) {
                 <p className="text-yellow-500">he/him</p>
             </header>
             <section>
-                <Sectionheader title="Hello 👋"/>
+                <Sectionheader title="Hello" emoji="👋"/>
                 <p className="text-gray-400 text-xl">
                     Cloud native architect, media buff, photographer, and&nbsp;
                     <Link href="/coffee">
@@ -58,7 +58,7 @@ export default function Home({articles}) {
                 </p>
             </section>
             <section>
-                <Sectionheader title="Recent Blog Posts ✍️"/>
+                <Sectionheader title="Recent Blog Posts" emoji="✍️"/>
                 <div className="mx-auto grid gap-5 lg:grid-cols-3 max-w-lg lg:max-w-none">
                     {articles.map((article) => (
                         <Article key={article.slug} article={article}/>
@@ -66,13 +66,13 @@ export default function Home({articles}) {
                 </div>
             </section>
             <section>
-                <Sectionheader title="Projects 📌"/>
+                <Sectionheader title="Projects" emoji="📌"/>
                 <p className="text-gray-400 text-xl">
                     In progress...
                 </p>
             </section>
             <section>
-                <Sectionheader title="Media 🔊"/>
+                <Sectionheader title="Media"/>
                 <div className="mx-auto grid gap-5 lg:grid-cols-2 max-w-lg lg:max-w-none">
                     <Mediacard
                         title="🎧 What I'm Listening To"
@@ -89,7 +89,7 @@ export default function Home({articles}) {
                 </div>
             </section>
             <section>
-                <Sectionheader title="Tools ⚒️"/>
+                <Sectionheader title="Tools" emoji="⚒️"/>
                 <div className="grid gap-5 grid-cols-2 lg:grid-cols-4 lg:max-w-none">
                     <Link href="/coffee">
                         <a>
