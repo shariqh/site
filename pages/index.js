@@ -1,5 +1,6 @@
-import Head from 'next/head'
+import Head from "next/head"
 import Link from "next/link"
+import Image from "next/image"
 import Sectionheader from "../components/sectionheader"
 import Mediacard from "../components/mediacard"
 import {fetchAPI} from "../lib/api";
@@ -29,12 +30,15 @@ export default function Home({articles}) {
                 <title>{name}&apos; Development Site</title>
             </Head>
             <header className="text-center text-white">
-                <img className="mx-auto ring-4 ring-yellow-500 rounded-full"
-                     src="/images/profile.jpg"
-                     alt=""
-                     width="240"
-                     height="240">
-                </img>
+                <div className="relative mx-auto h-60 w-60 ring-4 ring-yellow-500 rounded-full">
+                    <Image className="rounded-full object-contain"
+                           placeholder="blur"
+                           blurDataURL="/images/placeholder.png"
+                           src="/images/profile.jpg"
+                           alt=""
+                           layout="fill"
+                    />
+                </div>
                 <h1 className="mx-auto pt-6 text-4xl font-bold">{name}</h1>
                 <p className="text-yellow-500">he/him</p>
             </header>
