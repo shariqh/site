@@ -1,4 +1,4 @@
-import db, {postToJSON} from "../../lib/firebase"
+import {db, postToJSON} from "../../lib/firebase"
 import Head from "next/head";
 import {siteTitle} from "../index";
 import {Coffeebanner} from "../../components/coffeebanner"
