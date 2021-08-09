@@ -1,21 +1,25 @@
+import Image from "next/image"
 import Layout from "../../components/layout";
 import {fetchAPI, getStrapiMedia} from "../../lib/api";
 
 const name = 'Shariq Hirani'
 
-const Article = ({article, tags}) => {
+const Article = ({article}) => {
     const imageUrl = getStrapiMedia(article.image);
 
     return (
         <Layout name={name}>
             <section>
-                <div className="flex flex-col mx-auto text-gray-400 max-w-2xl">
-                    <img src={imageUrl}
-                         placeholder="blur"
-                         blurDataURL="/images/placeholder.png"
-                         alt=""
-                         layout="fill"
-                    />
+                <div className="text-gray-400 max-w-2xl">
+                    <div className="relative h-96">
+                        <Image src={imageUrl}
+                               className="object-contain"
+                               placeholder="blur"
+                               blurDataURL="/images/placeholder.png"
+                               alt=""
+                               layout="fill"
+                        />
+                    </div>
                     <p className="my-4 text-white text-2xl">{article.title}</p>
                     <p className="-gray-400 text-xl">{article.content}</p>
                 </div>
@@ -42,10 +46,8 @@ export async function getStaticProps({params}) {
         `/articles?slug=${params.slug}`
     );
 
-    const {tags} = articles[0];
-
     return {
-        props: {article: articles[0], tags},
+        props: {article: articles[0]},
         revalidate: 1,
     };
 }

@@ -3,7 +3,7 @@ import Link from "next/link"
 import Sectionheader from "../components/sectionheader"
 import Mediacard from "../components/mediacard"
 import {fetchAPI} from "../lib/api";
-import {Article} from "../components/article";
+import {Articlecard} from "../components/articlecard";
 import Layout from "../components/layout";
 
 const name = 'Shariq Hirani'
@@ -61,7 +61,7 @@ export default function Home({articles}) {
                 <Sectionheader title="Recent Blog Posts" emoji="✍️"/>
                 <div className="mx-auto grid gap-5 lg:grid-cols-3 max-w-lg lg:max-w-none">
                     {articles.map((article) => (
-                        <Article key={article.slug} article={article}/>
+                        <Articlecard key={article.slug} article={article}/>
                     ))}
                 </div>
             </section>

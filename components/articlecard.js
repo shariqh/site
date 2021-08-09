@@ -2,13 +2,15 @@ import Link from "next/link"
 import Image from "next/image"
 import {getStrapiMedia} from "../lib/api";
 
-const Article = ({article}) => {
+const Articlecard = ({article}) => {
     const date = new Date(article.published_at);
+
     return (
         <div key={article.title} className="flex flex-col overflow-hidden">
             <Image
-                className="w-full rounded-lg object-cover"
+                className="rounded-lg object-cover"
                 src={getStrapiMedia(article.image)}
+                alt=""
                 width={500}
                 height={260}
             />
@@ -29,4 +31,4 @@ const Article = ({article}) => {
     )
 }
 
-export {Article}
+export {Articlecard}
